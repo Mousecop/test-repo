@@ -1,8 +1,15 @@
 function whoAmI(name, age){
-    var yearOfBirth = (2017 - age); 
-    console.log("Hi, my ${name} is Chris, and I'm ${age} years old");
-    console.log("I was born in ${yearOfBirth}");
+	var yob = yearOfBirth(age);
+    console.log("Hi, my name is ${name}, and I'm ${age} years old");
+    console.log("I was born in ${yob}");
+
+    
 }
 
-whoAmI(Jake, 23);
+function yearOfBirth(age) {
+	var yob = (2017 - age);
+	return yob;
+}
+
+whoAmI("Jake", 23);
 
