@@ -1,0 +1,21 @@
+<script>
+    function beyond(num){
+        var finalString;
+
+        if(num === 0){
+            finalString = "Staying home!";
+        }else if(num == Number.POSITIVE_INFINITY || num == Number.NEGATIVE_INFINITY){
+            switch(num){
+                case Number.POSITIVE_INFINITY : finalString = "To infinity ";
+                                                break;
+                case Number.NEGATIVE_INFINITY : finalString = "To negative infinity ";
+                                                break;
+                default : "How did you get here?"
+            }
+            finalString += "and beyond!";
+        }
+        console.log(finalString);
+    }
+
+    beyond(0);
+</script>
