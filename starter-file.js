@@ -5,13 +5,6 @@ function whoAmI(name, age){
 }
 
 function yearOfBirth(age) {
-
-//     if(age < 0){
-//         throw new Error("Age cannot be negative!");
-//     }else{
-//         return (2017 - age);   
-//     }
-
 	try {
 		if(age < 0) {
 			throw new Error("Age can't be negative");

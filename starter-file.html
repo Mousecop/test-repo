@@ -2,14 +2,16 @@
 function whoAmI(name, age){
 	var yob = yearOfBirth(age);
 	if(name != undefined && age != undefined) {
-		console.log("Hi, my name is " + name + " and I'm " + age + " years old");
-    	console.log("I was born in " + yob + "!");  
+		if(typeof age == "number" && typeof name == "string"){
+			console.log("Hi, my name is " + name + " and I'm " + age + " years old");
+    		console.log("I was born in " + yob + "!");
+		}else{
+			console.log("What the hell did you type in? INVALID!");
+		}
 	}
 	else {
 		console.log("Arguments not valid");
-	}
-
-     
+	} 
 }
 
 function yearOfBirth(age) {
@@ -34,5 +36,5 @@ function yearOfBirth(age) {
 	
  }
 
-whoAmI("Jake", 100);
+whoAmI();
 </script>
