@@ -1,1 +1,1 @@
-Hello my name is Jake and Jared
+Hello my name is Jake and Jared, and we love thinkful and dogs!
