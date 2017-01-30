@@ -1,0 +1,58 @@
+<script>
+    
+function RockPaperScissors(userChoice){
+    var computerChoice = 1 + Math.floor((Math.random()*3));
+    var computerConverted = convertType(computerChoice);
+    var userConverted = convertType(userChoice);
+    var result;
+
+    if(computerChoice == userChoice){
+        console.log("You tied!");
+    } else {
+        switch(computerConverted){
+            case "Rock": 
+                if(userConverted != "Paper"){
+                    result = "lose";
+                }else{
+                    result = "win";
+                }
+                break;
+            case "Paper":
+                if(userConverted != "Scissors"){
+                    result = "lose";
+                }else{
+                    result = "win";
+                }
+                break;
+            case "Scissors":
+                if(userConverted != "Rock"){
+                    result = "lose";
+                }else{
+                    result = "win";
+                }
+                break;
+        }
+        printResults(result, computerConverted, userConverted);
+    }
+}
+
+function printResults(result, computerConverted, userConverted){
+    console.log("You " + result + "! The computer played " + computerConverted + " and you played " + userConverted + "!");
+}
+
+function convertType(num){
+    if(num == 1){
+        return "Rock";
+    } else if(num == 2) {
+        return "Paper";
+    } else if(num == 3){
+        return "Scissors";
+    }else{
+        console.log("I don't know what that is!");
+    }
+}
+
+
+RockPaperScissors(1 + Math.floor((Math.random()*3)));
+
+</script>
