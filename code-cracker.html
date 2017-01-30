@@ -1,0 +1,80 @@
+<script>
+	
+function decode(word) {
+	var letterArray = ['a','b','c','d']
+	var decodedMessage = '';
+	var wordSplit = word.split(' ').map(function(currentWord) {
+
+		var firstLetter = currentWord.slice(0,1);
+		if (letterArray.includes(firstLetter)) {
+			switch(firstLetter) {
+				case 'a':
+					decodedMessage += currentWord.slice(1,2);
+					break;
+				case 'b': 
+					decodedMessage += currentWord.slice(2,3);
+					break;
+				case 'c':
+					decodedMessage += currentWord.slice(3,4);
+					break;
+				case 'd': 
+					decodedMessage += currentWord.slice(4,5);
+			}
+
+		}
+		else {
+			decodedMessage += ' ';
+		}
+		
+	});
+	
+console.log(decodedMessage);
+}
+
+decode('craft block argon meter bells brown croon droop');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<!-- console.log(wordSplit);
+	for (var i = 0; i < wordSplit.length; i++) {
+		if (wordSplit[0] in letterArray) {
+			console.log('jndsja');
+		}
+		else {
+			console.log('you messed up');
+		}
+	} -->
+
+
+<!-- .map(function(currentWord) {
+		var firstLetter = currentWord.slice(0,1);
+		if (firstLetter == 'a'||'b'||'c'||'d') {
+			console.log('dmksnads');
+		}
+		else {
+			console.log("space goes here");
+		}
+	}); -->
