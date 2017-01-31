@@ -1,0 +1,37 @@
+<script>
+var testNumbers = [141,3,642,6921,039];
+function average(numbers) {
+  var sum = 0;
+  var i = numbers.length;
+  while (i--) {
+    sum += numbers[i];
+  }
+  var avg = sum/numbers.length;
+  return avg;
+}
+
+console.log(average(testNumbers));
+
+
+//forEach way
+
+function average2(numbers) {
+  var sum = 0;
+  numbers.forEach(function(num) {
+    sum += num;
+  });
+  var avg = sum/numbers.length;
+  return avg;
+
+}
+console.log(average2(testNumbers));
+
+
+
+
+
+
+
+
+
+</script>
