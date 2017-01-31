@@ -1,0 +1,79 @@
+<script>
+
+// If/Else way
+function fizzBuzz(countTo) {
+    var result = [];
+  for (var i=1; i <= countTo; i++){
+    if (i % 15 === 0){
+      result.push('fizzbuzz');
+  }
+    else if (i % 5 === 0) {
+      result.push('buzz');
+  }
+    else if (i % 3 === 0) {
+      result.push('fizz');
+  }
+    else {
+      result.push(i);
+  }
+ }
+
+  return result;
+}
+console.log(fizzBuzz(16));
+
+
+// Switch/Case way
+function fizzBuzz2(countTo) {
+  var countToConverted = convertType(countTo);
+  var result = [];
+  switch(countToConverted){
+    case "FizzBuzz":
+      result.push('fizzbuzz');
+      break;
+    case "Buzz":
+      result.push('buzz');
+      break;
+    case "Fizz":
+      result.push('fizz');
+      break;
+    default:
+      console.log("Not Divisible");
+  }
+  return result;
+}
+
+function convertType(num) {
+  if (num % 15 === 0) {
+    return "FizzBuzz";
+  } else if (num % 5 === 0) {
+    return "Buzz";
+  } else if (num % 3 === 0) {
+    return "Fizz";
+  }
+}
+
+
+console.log(fizzBuzz2(128321));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
