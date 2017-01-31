@@ -1,0 +1,17 @@
+<script>
+
+  function createGreeter(greeter) {
+    return function(name) {
+      console.log(`${greeter} ${name}`);
+    }
+  }
+
+  var callGreeter = createGreeter('Hello');
+  callGreeter('Anna');
+  var callGreeter2 = createGreeter('Bonjour');
+  callGreeter2('Sophia');
+
+
+
+
+</script>
