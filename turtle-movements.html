@@ -1,0 +1,16 @@
+<script>
+  var turtleMovements = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+  var filteredMovements = turtleMovements.filter(function(value) {return value[0] >= 0 && value[1] >= 0});
+  var turtleSteps = filteredMovements.map(function(steps) { return steps[0] + steps[1] });
+
+  function display() {
+    turtleSteps.forEach(function(steps) {
+      console.log(steps);
+    });
+  }
+
+
+  console.log(display());
+
+
+</script>
